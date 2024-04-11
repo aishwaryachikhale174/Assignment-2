@@ -1,0 +1,195 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#formContainer {
+    display: flex;
+    width: 40%;
+    margin: 20px auto;
+    border: 2px solid gray;
+    height: 60%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    flex-direction: column;
+}
+
+.formScreen {
+    display: none;
+    justify-content: center;
+}
+
+
+p {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    color: gray;
+    text-align: center;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.title h2 {
+    margin-bottom: 5px; 
+    color: rgb(211, 12, 12);
+    text-align: center;   
+}
+
+.formScreen.active {
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.innerform {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.innerform input[type="text"],
+.innerform select {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: rgb(245, 225, 225);
+    box-sizing: border-box;
+   
+}
+
+
+.innerform label {
+    font-weight: 600; 
+    margin-bottom: 5px;
+}
+
+
+.innerinput{
+    border: 1px solid gray;
+    padding: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgb(245, 225, 225);
+    color: rgb(109, 104, 104);
+    font-size: 15px;
+   
+}
+.innerform select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('dropdown-arrow.png') no-repeat right center;
+    background-size: 16px;
+    padding-right: 30px;
+    cursor: pointer;
+    background-color: rgb(245, 225, 225);
+    color: rgb(122, 115, 115);
+    margin-bottom: 10px;
+
+}
+
+.labelinner label {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.totalinput{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.progressBar {
+    width: 100%;
+    margin-top: 5px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    margin: auto;
+}
+
+.progress {
+    background-color: #4CAF50;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.innerform option{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#issued option{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.nextBtn,
+.prevBtn,
+#submitBtn {
+    padding: 10px ;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+    
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 102%;
+    font-weight: 600;
+}
+
+.nextBtn:hover,
+.prevBtn:hover,
+#submitBtn:hover {
+    background-color: #45a049;
+}
+
+#successMessage {
+    display: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px; 
+    margin: 10px; 
+    font-size: 14px;
+    text-align: center;
+}

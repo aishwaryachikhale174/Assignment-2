@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Form with Progress Bar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+    <h1>Driving License Renewal</h1>
+    <div id="formContainer">
+        <div class="progressBar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="formScreen active">
+        <div class="title">  
+            <h2>Let's get started</h2>
+            <p>Add your details (As per your registered records)</p>
+        </div>  
+            <div class="form">
+                <div class="innerform">
+                    <div class="labelinner">
+                         <label for="name">Name:</label>
+                     </div>
+                    <input 
+                        type="text"
+                        id="name" 
+                        name="name"
+                        placeholder="Enter Name"
+                        className="nameInput"
+                    >
+                </div>
+                <div class="innerform">
+                    <div class="labelinner">
+                        <label>Nature of Driving License:</label>
+                    </div>
+                    <div class="totalinput">
+                        <div class="innerinput">
+                            <input 
+                                type="radio" 
+                                id="private" 
+                                name="licenseType" 
+                                value="private" 
+                                required
+                            >
+                            <label for="private">Private</label>
+                        </div>
+                        <div class="innerinput">
+                            <input 
+                                type="radio"
+                                id="commercial" 
+                                name="licenseType" 
+                                value="commercial" 
+                                required
+                            >
+                            <label for="commercial">Commercial</label>
+                        </div>
+                     </div>
+                </div>
+                <div class="innerform">
+                    <div class="labelinner">
+                        <label>Type of Previous Driving License:</label>
+                    </div>
+                    <div class="totalinput">
+                        <div class="innerinput">
+                            <input 
+                                type="radio" 
+                                id="paper" 
+                                name="prevLicenseType" 
+                                value="paper"
+                                required
+                            >
+                            <label for="paper">Paper Driving License</label>     
+                        </div>
+
+                        <div class="innerinput">
+                            <input 
+                                type="radio" 
+                                id="smart" 
+                                name="prevLicenseType" 
+                                value="smart" 
+                                required
+                            >
+                            <label for="smart">Smart Driving License</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="nextBtn">Next</button>
+
+        </div>
+        <div class="formScreen">
+            <div class="title">
+                <h2>Let's get started</h2>
+                <p>Add your details (As per your registered records)</p>   
+            </div>
+            <div class="form">
+                <div class="innerform">
+                    <label for="issuedPlace">Place where Driving License was issued:</label>
+                    <input 
+                        type="text" 
+                        placeholder="Enter place name"
+                        id="issuedPlace" 
+                        name="issuedPlace" 
+                        required
+                    >
+                </div>
+                <div class="innerform">
+                    <label for="issuedYear">Issued Year of License:</label>
+                    <select id="issuedYear" name="issuedYear" required>
+                        <!-- Dropdown options for years -->
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <!-- Add more options as needed -->
+                    </select>
+
+                    <label for="expiredYear">Expired Year of Previous License:</label>
+                    <select id="expiredYear" name="expiredYear" required>
+                        <!-- Dropdown options for expired years -->
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="prevBtn">Previous</button>
+                    <button id="submitBtn">Submit</button>
+                </div>
+               
+        </div>
+        <div id="successMessage" style="display: none;">Form submitted successfully!</div>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
